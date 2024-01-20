@@ -4,6 +4,7 @@ Proposito:
 Es una pagina web de peliculas ya que el cine es uno de mis actividades favoritas, me base en Letterboxd para desarrollar mi pagina.
 
 Explicacion de la pagina:
+
 -Lo primero que hice fue hacer el menu y el footer
 Esta la pagina principal el Home, que se presenta con una portada, despues hay seccion de peliculas recientes que utilizo propiedades de css como flexbox para acomodarla y con js le doy un funcionalida que si pasas el mouse
 por la imagen hace como un zoom y te muestra la nota (me base en la puntuacion de imdb)
@@ -16,7 +17,7 @@ carousel. por ultimo en la pagina de pelicula hice una tabla que muestra mi top 
 - Despues tenemos el apartado de contacto que utilizo un formulario para poder formarlo que al usuario le piso el nombre, email, asunto y un texto, tenemos el boton de enviar, y abajo le agregue las redes sociales principales. Aca utilice SessionStorage para almacenar
 datos que solo duran durante la sesión actual del navegador.
 
-Esta es mi pagina web que desarrolo para el proyecto final del curso, en mi opinion me gusto bastante el curso lastima que en la parte de react no puede meterme mucho de lleno ya que se me complico con los finales en diciembre, pero fue bueno el curso y muy buen material
+Esta es mi pagina web que desarrolo para el proyecto final del curso, en mi opinion me gusto bastante el curso lastima que en la parte de react no puede meterme mucho de lleno ya que se me complico con los finales en diciembre, pero fue bueno el curso y muy bueno material
 de estudio. Agradecer al personal y a la gente de que estuvo detras de esto.
 
 By Juan Vergara, estudiante de ingenieria de sistemas de FRSR
