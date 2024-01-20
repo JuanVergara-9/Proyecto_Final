@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #000;
+    color: #fff;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url(../img/);
+}
+
+ /* MENU */
+header{
+    background-color: #0000;
+    height: 70px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+}
+
+.logo img{
+    height: 40px;
+    width: auto;
+}
+
+header .logo a{
+    margin: 0;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 1.65em;
+}
+
+header .container{
+    padding-top: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav{
+    display: flex;
+    text-align: center;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+.nav-menu a:hover {
+    color: #ff0000; 
+    transition: color 0.7s ease; 
+}
+
+/* LOGIN */
+
+.login {
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container-form {
+    width: 90%;
+    height: 540px;
+    display: flex;
+    justify-content: space-around;
+    transition:  all .5s ease-out;
+}
+
+.welcome-back {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.message {
+    padding: 16px;
+}
+
+.message h2 {
+    font-size: 27.2px;
+    padding: 16px 0;
+}
+
+.message button {
+    padding: 16px;
+    font-weight: 400;
+    background-color: #1e1e1e;
+    border-radius: 32px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 32px;
+    transition: all .3s ease-in;
+    color: #fff;
+}
+
+.message button:hover {
+    background-color: #ff0000;
+}
+
+.formulario {
+    width: 600px;
+    height: 600px;
+    padding: 16px;
+    margin: 32px;
+    background-color: #0f0f0f;
+    text-align: center;
+}
+
+.inicio-sesion {
+    padding: 43px 0; 
+    font-size: 28px;
+}
+
+.iconos {
+    width: 200px;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+
+
+.border-icon {
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    border: solid thin white;
+    border-radius: 50%;
+    font-size: 24px;
+    transition: all .3s ease-in;
+}
+
+.border-icon:hover {
+    background-color: #ff0000;
+    cursor: pointer;
+}
+
+.cuenta-gratis {
+    padding: 32px 0;
+}
+
+.formulario input {
+    width: 70%;
+    display: block;
+    margin: auto;
+    margin-bottom: 32px;
+    background-color: transparent;
+    border: none;
+    border-bottom: white thin solid;
+    text-align: center;
+    outline: none;
+    padding: 3.2px 0;
+    font-size: 14.4px;
+    color: white;
+}
+
+.formulario input[type="button"] {
+    width: 60%;
+    margin: auto;
+    border: solid thin white;
+    padding: 11.2px;
+    border-radius: 32px;
+    background-color: white;
+    font-weight: 600;
+    margin-top: 48px;
+    font-size: 12.8px;
+    cursor: pointer;
+    color: #222;
+}
+
+.iconos-segundo {
+    width: 200px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.sign-in {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.sign-in.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sign-up.active {
+    opacity: 0;
+    visibility: hidden;
+}

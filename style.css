@@ -1,0 +1,335 @@
+*{
+    box-sizing: border-box;
+    
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #000;
+    color: #fff;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ /* MENU */
+header{
+    background-color: #0000;
+    height: 70px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+}
+
+.logo img{
+    height: 40px;
+    width: auto;
+}
+
+header .logo a{
+    margin: 0;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 1.65em;
+}
+
+header .container{
+    padding-top: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav{
+    display: flex;
+    text-align: center;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+.nav-menu a:hover {
+    color: #ff0000; 
+    transition: color 0.7s ease; 
+}
+
+ /* PORTADA */
+.portada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portada img {
+    height: auto;
+    width: 400px;
+}
+
+ /* PELICULAS NUEVAS*/
+
+#peliculas-nuevas {
+    background-color: #000000; 
+    color: white;
+    padding: 0px;
+}
+
+#peliculas-nuevas h2{
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.peliculas-lista {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+.peliculas-lista li {
+    text-align: center;
+}
+
+.pelicula {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.puntuacion {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 8px;
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+}
+
+.pelicula:hover .puntuacion {
+    opacity: 1; 
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+.peliculas-lista img {
+    width: 130px; 
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.peliculas-lista img:hover {
+    animation: zoomIn 0.5s forwards;
+}
+
+.peliculas-lista p {
+    margin-top: 10px;
+}
+
+ /* RECOMENDACION DE PELICULAS*/
+
+ .recomendacion-peliculas .titulo-rec{
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+ }
+
+.peliculas-god img{
+    height: 220px;
+    width: 150px;
+}
+
+.peliculas-god li {
+    display: flex;
+    justify-content: center;
+}
+
+.peliculas-god .critica {
+    width: 800px;
+    height: 220px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #0f0f0f;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+
+}
+
+.peliculas-god .critica h2 {
+    font-size: 25px;
+}
+
+.titulo-directores {
+    padding-top: 30px;
+    padding-bottom: 15px;
+    padding-left: 95px;
+    color: #1e1e1e;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+}
+
+/* NOTICIAS */
+
+#posts {
+    padding-bottom: 100px;
+    background-color: #000;
+    display: grid;
+    grid-template: repeat(2, 300px) / repeat(3, 350px);
+    gap: 10px;
+    justify-content: center;
+    align-content: center;
+}
+
+#posts .post{
+    display: grid;
+    align-content: end;
+    border-radius: 5px;
+    background-color: white;
+
+    background-size: cover;
+    background-position: center center;
+    
+    overflow: hidden;
+}
+
+#posts .post a{
+    color: white;
+    text-decoration: none;
+}
+
+#posts .post .title{
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    padding: 10px;
+}
+
+#posts .post .title:hover{
+    background-color: white;
+    color: black;
+}
+
+#posts .post.post-1{
+    background-image: url(img/a6a3cca4-de94-49ce-a543-82a5b2517067_16-9-discover.jpg);
+}
+
+#posts .post.post-2{
+    background-image: url(img/62788.webp);
+}
+
+#posts .post.post-3{
+    background-image: url(img/martin-scorsese-scaled.webp);
+}
+
+#posts .post.post-4{
+    background-image: url(img/christopher-nolan-dc23745902014fb6ae107bb65a10c384.webp);
+}
+
+#posts .post.post-5{
+    background-image: url(img/c77163e_1687186398489-063-1498264220.jpg);
+}
+
+#posts .post.post-6{
+    background-image: url(img/paul-thomas-anderson-620x349.jpg);
+}
+
+/* API */
+
+.api {
+    height: 300px;
+}
+
+.api h2 {
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.boton-api {
+    display: flex;
+    justify-content: center;
+}
+
+.boton-api button {
+    padding: 40px;
+    font-weight: 400;
+    background-color: #1e1e1e;
+    border-radius: 80px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 22px;
+    margin-top: 32px;
+    transition: all .3s ease-in;
+    color: #fff;
+}
+
+.boton-api button:hover {
+    background-color: #ff0000;
+}
+
+/* Footer */
+
+footer{
+    background: #0f0f0f;
+    padding: 20px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+.contenedor-footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #fff;
+}
+
+.content-foo{
+    text-align: center;
+}
+
+.content-foot h4{
+    color: #fff;
+    border-bottom: 3px solid #ff0000;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.content-foot p{
+    color: #fff;
+}
+
+.titulo-final{
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: #fff;
+}

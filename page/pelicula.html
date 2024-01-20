@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/d5jr5ox-ab056df1-fe63-4426-8bf0-880a69dcdfd2.png" type="image/x-icon">
+    <title>POP-PELICULAS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/pelicula.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-lZ9v5Zf12TIUkrAoo8QxUkAAKxU9Pxl5qlo2S3q9jBvNT9O1W1k6ucuDzOc5zg1TpLSfjW/wfQaj6LfcOvHPCg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="../img/d5jr5ox-ab056df1-fe63-4426-8bf0-880a69dcdfd2.png" alt="">
+                <a href="../index.html">POP-CORN</a>
+            </div>
+            <nav class="nav-menu">
+                <a href="login.html">Login</a>
+                <a href="nosotro.html">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="portada">
+        <img src="../img/goodfellas-wallpaper-preview.jpg" alt="">
+    </section>
+
+    <section id="peliculas-oscar" class="section-oscar">
+        <h2>Peliculas Gandoras del Oscar</h2>
+        <ul class="peliculas-lista">
+            <li>
+                <div class="pelicula">
+                    <img src="../img/oscar/El_padrino-993414333-large.jpg" alt="Título Película 1">
+                    <div class="puntuacion">9.2/10</div>
+                </div>
+                <p>The Godfather</p>
+            </li>
+
+            <li>
+                <div class="pelicula">
+                    <img src="../img//oscar/Elpadrino2.webp" alt="Título Película 2">
+                    <div class="puntuacion">9.0/10</div>
+                </div>
+                <p>The Godfather Part II</p>
+            </li>
+
+            <li>
+                <div class="pelicula">
+                    <img src="../img//oscar/MV5BNDhmNTA0ZDMtYjhkNS00NzEzLWIzYTItOGNkMTVmYjE2YmI3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg" alt="Título Película 3">
+                    <div class="puntuacion">8.1/10</div>
+                </div>
+                <p>The Deer Hunter</p>
+            </li>
+
+            <li>
+                <div class="pelicula">
+                    <img src="../img//oscar/Cartel_La_lista_de_Schindler.webp" alt="Título Película 4">
+                    <div class="puntuacion">9.0/10</div>
+                </div>
+                <p>Schindler's List</p>
+            </li>
+
+            <li>
+                <div class="pelicula">
+                    <img src="../img//oscar/81ZOilPKzYL._AC_UF894,1000_QL80_.jpg" alt="Título Película 5">
+                    <div class="puntuacion">8.5/10</div>
+                </div>
+                <p>The Departed</p>
+            </li>
+
+            <!-- Otras películas ocultas inicialmente -->
+            <li class="oculta">
+                <div class="pelicula">
+                    <img src="../img/oscar/No_Country_for_Old_Men_poster.jpg" alt="Otra Película">
+                    <div class="puntuacion">8.2/10</div>
+                </div>
+                <p>No Country for Old Men</p>
+            </li>
+            <li class="oculta">
+                <div class="pelicula">
+                    <img src="../img/oscar/Million_Dollar_Baby-342154413-large.jpg" alt="Otra Película">
+                    <div class="puntuacion">8.1/10</div>
+                </div>
+                <p>Million Dollar Baby</p>
+            </li>
+            <li class="oculta">
+                <div class="pelicula">
+                    <img src="../img/oscar/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg" alt="Otra Película">
+                    <div class="puntuacion">8.8/10</div>
+                </div>
+                <p>Forrest Gump</p>
+            </li>
+            <li class="oculta">
+                <div class="pelicula">
+                    <img src="../img/oscar/americanbe.jpg" alt="Otra Película">
+                    <div class="puntuacion">8.3/10</div>
+                </div>
+                <p>American Beauty</p>
+            </li>
+            <li class="oculta">
+                <div class="pelicula">
+                    <img src="../img/oscar/El_golpe-433653100-large.jpg" alt="Otra Película">
+                    <div class="puntuacion">8.3/10</div>
+                </div>
+                <p>The Sting</p>
+            </li>
+
+        </ul>
+        <div class="boton">
+            <button id="mostrarMas" onclick="mostrarMasPeliculas()">Mostrar Más</button>
+            <button id="mostrarMenos" onclick="mostrarMenosPeliculas()">Mostrar Menos</button>
+        </div>
+            
+    </section>
+
+    <script>
+        const listaPeliculas = document.getElementById('listaPeliculas');
+        const peliculas = Array.from(document.querySelectorAll('.peliculas-lista li'));
+        const botonMostrarMas = document.getElementById('mostrarMas');
+        const botonMostrarMenos = document.getElementById('mostrarMenos');
+        let indiceMostrarMas = 0;
+        const peliculasPorMostrar = 5;
+
+        function mostrarMasPeliculas() {
+            const inicio = indiceMostrarMas * peliculasPorMostrar;
+            const fin = inicio + peliculasPorMostrar;
+
+            // Muestra las películas correspondientes al grupo actual
+            for (let i = inicio; i < fin && i < peliculas.length; i++) {
+                peliculas[i].style.display = 'block';
+            }
+
+            // Actualiza el índice para las próximas películas
+            indiceMostrarMas++;
+
+            // Si todas las películas ya se han mostrado, oculta el botón
+            if (fin >= peliculas.length) {
+                botonMostrarMas.style.display = 'none';
+                botonMostrarMenos.style.display = 'inline-block';
+            }
+        }
+
+        function mostrarMenosPeliculas() {
+            // Oculta las películas adicionales
+            for (let i = peliculasPorMostrar; i < peliculas.length; i++) {
+                peliculas[i].style.display = 'none';
+            }
+
+            // Muestra el botón "Mostrar Más" y oculta el botón "Mostrar Menos"
+            botonMostrarMas.style.display = 'inline-block';
+            botonMostrarMenos.style.display = 'none';
+
+            // Reinicia el índice
+            indiceMostrarMas = 0;
+        }
+
+        botonMostrarMas.addEventListener('click', mostrarMasPeliculas);
+        botonMostrarMenos.addEventListener('click', mostrarMenosPeliculas);
+        // Llama a la función para cargar las primeras películas
+        mostrarMasPeliculas();
+
+    </script>
+
+    <section class="film">
+
+        <div class="peliculas-recomendadas contenedor">
+			<div class="contenedor-titulo-controles">
+				<h3>Películas Recomendadas</h3>
+			
+			</div>
+
+			<div class="contenedor-principal">
+				<button role="button" id="flecha-izquierda" class="flecha-izquierda" aria-label="Mover hacia la izquierda">
+                    <i class="fas fa-angle-left"></i>
+                </button>
+                
+
+				<div class="contenedor-carousel">
+					<div class="carousel">
+						<div class="movie">
+							<a href="#" aria-label="Película 1"><img src="../img/recomendar/Her-716403893-large.jpg" alt=""></a>
+                            <p>Her</p>
+						</div>
+						<div class="movie">
+							<a href="#" aria-label="Película 2"><img src="../img/recomendar/MV5BMTk2NDcyNDE5N15BMl5BanBnXkFtZTgwNDA0MzQ1NzE@._V1_.jpg" alt=""></a>
+                            <p>Everybody Wants Some</p>
+						</div>
+						<div class="movie">
+							<a href="#" aria-label="Película 3"><img src="../img/recomendar/pms.jpg" alt=""></a>
+                            <p>Little Miss Sunshine</p>
+						</div>
+						<div class="movie">
+							<a href="#" aria-label="Película 4"><img src="../img/recomendar/Cinema_Paradiso-502451618-large.jpg" alt=""></a>
+                            <p>Cinema Paradiso</p>
+						</div>
+						<div class="movie">
+							<a href="#" aria-label="Película 5"><img src="../img/recomendar/goodfellas-343032101-large.jpg" alt=""></a>
+                            <p>GoodFellas</p>
+						</div>
+						<div class="movie">
+							<a href="#" aria-label="Película 6"><img src="../img/recomendar/image.png" alt=""></a>
+                            <p>Apocalypse Now</p>
+						</div>
+						<div class="movie">
+							<a href="#" aria-label="Película 7"><img src="../img/recomendar/inter.jpg" alt=""></a>
+                            <p>Interstellar</p>
+						</div>
+						<div class="movie">
+							<a href="#" aria-label="Película 8"><img src="../img/recomendar/thetruman.jpg" alt=""></a>
+                            <p>The Truman Show</p>
+						</div>
+                        <div class="movie">
+							<a href="#" aria-label="Película 8"><img src="../img/recomendar/Asteroid_City-903888157-large.jpg" alt=""></a>
+                            <p>Asteroid City</p>
+						</div>
+                        <div class="movie">
+							<a href="#" aria-label="Película 9"><img src="../img/recomendar/Almost_famous_poster1.jpg" alt=""></a>
+                            <p>Almost Famous</p>
+						</div>
+                        <div class="movie">
+							<a href="#" aria-label="Película 10"><img src="../img/recomendar/aUltima_noche_en_el_Soho-749682871-large.jpg" alt=""></a>
+                            <p>Last Night In Soho</p>
+						</div>
+                        <div class="movie">
+							<a href="#" aria-label="Película 11"><img src="../img/recomendar/MV5BMzM5NjUxOTEyMl5BMl5BanBnXkFtZTgwNjEyMDM0MDE@._V1_.jpg" alt=""></a>
+                            <p>The Grand Budapest Hotel</p>
+						</div>
+                        <div class="movie">
+							<a href="#" aria-label="Película 12"><img src="../img/recomendar/Los_Fabelman-672134059-large.jpg" alt=""></a>
+                            <p>The Fabelmans</p>
+						</div>
+                        <div class="movie">
+							<a href="#" aria-label="Película 13"><img src="../img/recomendar/Jojo_Rabbit-509852787-large.jpg" alt=""></a>
+                            <p>Jojo Rabbit</p>
+						</div>
+                        <div class="movie">
+							<a href="#" aria-label="Película 14"><img src="../img/recomendar/fullmetal.jpg" alt=""></a>
+                            <p>Full Metal Jacket</p>
+						</div>
+					</div>
+				</div>
+
+				<button role="button" id="flecha-derecha" class="flecha-derecha" aria-label="Mover hacia la derecha">
+                    <i class="fas fa-angle-right"></i>
+                </button>
+			</div>
+		</div>
+
+    </section>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script>
+        const fila = document.querySelector('.contenedor-carousel');
+        const films = document.querySelectorAll('.movie');
+        const flechaIzquierda = document.getElementById('flecha-izquierda');
+        const flechaDerecha = document.getElementById('flecha-derecha');
+
+        // ? ----- ----- Event Listener para la flecha derecha. ----- -----
+        flechaDerecha.addEventListener('click', () => {
+            fila.scrollLeft += fila.offsetWidth;
+
+            const indicadorActivo = document.querySelector('.indicadores .activo');
+            if(indicadorActivo.nextSibling){
+                indicadorActivo.nextSibling.classList.add('activo');
+                indicadorActivo.classList.remove('activo');
+            }
+        });
+
+        // ? ----- ----- Event Listener para la flecha izquierda. ----- -----
+        flechaIzquierda.addEventListener('click', () => {
+            fila.scrollLeft -= fila.offsetWidth;
+
+            const indicadorActivo = document.querySelector('.indicadores .activo');
+            if(indicadorActivo.previousSibling){
+                indicadorActivo.previousSibling.classList.add('activo');
+                indicadorActivo.classList.remove('activo');
+            }
+        });
+
+        // ? ----- ----- Paginacion ----- -----
+        const numeroPaginas = Math.ceil(films.length / 5);
+        for(let i = 0; i < numeroPaginas; i++){
+            const indicador = document.createElement('button');
+
+            if(i === 0){
+                indicador.classList.add('activo');
+            }
+
+            document.querySelector('.indicadores').appendChild(indicador);
+            indicador.addEventListener('click', (e) => {
+                fila.scrollLeft = i * fila.offsetWidth;
+
+                document.querySelector('.indicadores .activo').classList.remove('activo');
+                e.target.classList.add('activo');
+            });
+        }
+
+        // ? ----- ----- Hover ----- -----
+        films.forEach((movie) => {
+            movie.addEventListener('mouseenter', (e) => {
+                const elemento = e.currentTarget;
+                setTimeout(() => {
+                    films.forEach(movie => movie.classList.remove('hover'));
+                    elemento.classList.add('hover');
+                }, 300);
+            });
+        });
+
+        fila.addEventListener('mouseleave', () => {
+            films.forEach(movie => movie.classList.remove('hover'));
+        });
+    </script>
+
+    <section id="tabla-peliculas">
+        <h2>Mi TOP 10 de Peliculas</h2>
+        <table class="tabla">
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Director</th>
+                    <th>Año</th>
+                    <th>Género</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>The Godfather</td>
+                    <td>1972</td>
+                    <td>Francis Ford Coppola</td>
+                    <td>Crimen, Drama</td>
+                </tr>
+                <tr>
+                    <td>The Shawshank Redemption</td>
+                    <td>1994</td>
+                    <td>Frank Darabont</td>
+                    <td>Drama</td>
+                </tr>
+                <tr>
+                    <td>Full Metal Jacket</td>
+                    <td>1987</td>
+                    <td>Stanley Kubrick</td>
+                    <td>Belico</td>
+                </tr>
+                <tr>
+                    <td>Interstellar</td>
+                    <td>2014</td>
+                    <td>Christopher Nolan</td>
+                    <td>Sci-Fi</td>
+                </tr>
+                <tr>
+                    <td>The Sting</td>
+                    <td>1973</td>
+                    <td>George Roy Hill</td>
+                    <td>Drama</td>
+                </tr>
+                <tr>
+                    <td>Inglourious Basterds</td>
+                    <td>2009</td>
+                    <td>Quentin Tarantino</td>
+                    <td>Drama/Thriller</td>
+                </tr>
+                <tr>
+                    <td>Spirited away</td>
+                    <td>2001</td>
+                    <td>Hayao Miyazaki</td>
+                    <td>Fantasia/Aventura</td>
+                </tr>
+                <tr>
+                    <td>American History X</td>
+                    <td>1998</td>
+                    <td>Tony Kaye</td>
+                    <td>Drama</td>
+                </tr>
+                <tr>
+                    <td>Oldboy</td>
+                    <td>2003</td>
+                    <td>Chan-Wook Park</td>
+                    <td>Thriller</td>
+                </tr>
+                <tr>
+                    <td>The Royal Tenenbaums</td>
+                    <td>2001</td>
+                    <td>Wes Anderson</td>
+                    <td>Drama/Comedia</td>
+                </tr>
+
+
+            </tbody>
+        </table>
+    </section>
+
+
+    <footer>
+        <div class="contenedor-footer">
+            <div class="content-foot">
+                <h4>Phone</h4>
+                <p>260480095</p>
+            </div>
+            <div class="content-foot">
+                <h4>Email</h4>
+                <p>juanvergara920@gmail.com</p>
+            </div>
+            <div class="content-foot">
+                <h4>Location</h4>
+                <p>Argentina</p>
+            </div>
+        </div>
+        <h2 class="titulo-final">&copy; POP-CORN |  Juan Vergara</h2>
+    </footer>
+
+    <script src="../js/peliculas.js"></script>
+</body>
+</html>

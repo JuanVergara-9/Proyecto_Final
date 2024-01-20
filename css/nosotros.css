@@ -1,0 +1,157 @@
+*{
+    box-sizing: border-box;
+    
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #000;
+    color: #fff;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ /* MENU */
+header{
+    background-color: #0000;
+    height: 70px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+}
+
+.logo img{
+    height: 40px;
+    width: auto;
+}
+
+header .logo a{
+    margin: 0;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 1.65em;
+}
+
+header .container{
+    padding-top: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav{
+    display: flex;
+    text-align: center;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+.nav-menu a:hover {
+    color: #ff0000; 
+    transition: color 0.7s ease; 
+}
+
+/* CONTACTO */
+
+#contact {
+    background-color: #000000;
+    display: grid;
+    grid-template: auto 100px / 700px;
+    justify-content: center;
+    align-content: center;
+    box-sizing: border-box;
+}
+
+#contactForm {
+    padding: 20px;
+    color: white;
+    display: grid;
+    gap: 15px;
+    grid-template: auto / auto;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#contactForm input,
+#contactForm textarea {
+    padding: 20px 10px;
+    box-sizing: border-box;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+}
+
+#contact .social-networks {
+    justify-self: center;
+    padding: 10px 0;
+}
+
+#contact .social-networks a {
+    color: #fff;
+}
+
+#contactForm input[type="submit"] {
+    color: #fff;
+    background-color: #1e1e1e;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+#contactForm input[type="submit"]:hover {
+    background-color: #ff0000;
+    transition: color 0.7s ease;
+}
+
+
+/* Footer */
+
+footer{
+    background: #0f0f0f;
+    padding: 20px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+.contenedor-footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #fff;
+}
+
+.content-foo{
+    text-align: center;
+}
+
+.content-foot h4{
+    color: #fff;
+    border-bottom: 3px solid #ff0000;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.content-foot p{
+    color: #fff;
+}
+
+.titulo-final{
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: #fff;
+}

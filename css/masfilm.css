@@ -1,0 +1,143 @@
+*{
+    box-sizing: border-box;
+    
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #000000;
+    color: #fff;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ /* MENU */
+header{
+    background-color: #0000;
+    height: 70px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+}
+
+.logo img{
+    height: 40px;
+    width: auto;
+}
+
+header .logo a{
+    margin: 0;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 1.65em;
+}
+
+header .container{
+    padding-top: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav{
+    display: flex;
+    text-align: center;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+.nav-menu a:hover {
+    color: #ff0000; 
+    transition: color 0.7s ease; 
+}
+
+/* Peliculas */
+
+h2 {
+    font-size: 45px;
+    padding-left: 10px;
+}
+
+#listaPeliculas {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+
+#listaPeliculas li {
+    background-color: #1e1e1e;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+  
+
+#listaPeliculas img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+  
+
+#listaPeliculas .titulo {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+  
+
+/* Footer */
+
+footer{
+    background: #0f0f0f;
+    padding: 20px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+.contenedor-footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #fff;
+}
+
+.content-foo{
+    text-align: center;
+}
+
+.content-foot h4{
+    color: #fff;
+    border-bottom: 3px solid #ff0000;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.content-foot p{
+    color: #fff;
+}
+
+.titulo-final{
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: #fff;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/d5jr5ox-ab056df1-fe63-4426-8bf0-880a69dcdfd2.png" type="image/x-icon">
+    <title>POP-LOGIN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/login.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="../img/d5jr5ox-ab056df1-fe63-4426-8bf0-880a69dcdfd2.png" alt="">
+                <a href="../index.html">POP-CORN</a>
+            </div>
+            <nav class="nav-menu">
+
+                <a href="pelicula.html">Peliculas</a>
+                <a href="nosotro.html">Contacto</a>
+            </nav>
+        </div>
+    </header>
+    <section class="login">
+        <div class="container-form sign-up">
+            <div class="welcome-back">
+                <div class="message">
+                    <h2>Bienvenido a POP-CORN</h2>
+                    <p>Si ya tienes una cuenta por favor inicia sesion aqui</p>
+                    <button class="sign-up-btn">Iniciar Sesion</button>
+                </div>
+            </div>
+            <form id="signupForm" class="formulario">
+                <h2 class="create-account">Crear una cuenta</h2>
+                <div class="iconos">
+                    <div class="border-icon">
+                        <i class='bx bx-camera-movie'></i>
+                    </div>
+                    <div class="border-icon">
+                        <i class='bx bxl-gmail'></i>
+                    </div>
+                    <div class="border-icon">
+                        <i class='bx bxl-instagram'></i>
+                    </div>
+                </div>
+                <p class="cuenta-gratis">Crear una cuenta gratis</p>
+                <label for="signupName">Nombre</label>
+                <input type="text" id="signupName" name="signupName">
+            
+                <label for="signupEmail">Correo electrónico</label>
+                <input type="email" id="signupEmail" name="signupEmail">
+            
+                <label for="signupPassword">Contraseña</label>
+                <input type="password" id="signupPassword" name="signupPassword">
+                <input type="button" value="Registrarse" id="signupButton">
+            </form>
+
+        </div>
+        <div class="container-form sign-in">
+
+            <form id="loginForm" class="formulario">
+                <h2 class="inicio-sesion">Iniciar Sesión</h2>
+                <div class="iconos-segundo">
+                    <div class="border-icon">
+                        <i class='bx bx-camera-movie'></i>
+                    </div>
+                    <div class="border-icon">
+                        <i class='bx bxl-gmail'></i>
+                    </div>
+                    <div class="border-icon">
+                        <i class='bx bxl-instagram'></i>
+                    </div>
+                </div>
+                <label for="loginUsername">Usuario</label>
+                <input type="text" id="loginUsername" name="loginUsername">
+            
+                <label for="loginPassword">Contraseña</label>
+                <input type="password" id="loginPassword" name="loginPassword">
+                <input type="button" value="Iniciar Sesión" id="loginButton">
+            </form>
+            <div class="welcome-back">
+                <div class="message">
+                    <h2>Bienvenido a POP-CORN</h2>
+                    <p>Si aun no tienes una cuenta por favor regístrate aquí</p>
+                    <button class="sign-in-btn">Registrarse</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../js/login.js"></script>
+</body>
+</html>
